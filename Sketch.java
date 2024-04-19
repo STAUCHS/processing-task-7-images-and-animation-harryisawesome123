@@ -2,7 +2,7 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 /**
- * 
+ * A program Sketch.java that draws a background and two animated objects staying within the screen.
  * @author H. Rahukulan
  *
  */
@@ -16,7 +16,7 @@ public class Sketch extends PApplet {
   float fltMonkeyX = 40;
   float fltMonkeyY = 30;
 
-  // monkey image speed varibles
+  // Monkey image speed varibles
   float fltXMonkeySpeed = 3;
   float fltYMonkeySpeed = 5;
 
@@ -32,7 +32,7 @@ public class Sketch extends PApplet {
   float fltBackgroundX = 0;
   float fltBackgroundY = 0;
 
-  // define colours
+  // Define colours
   int Black = color(0);
   int Pink = color(255, 0, 255);
 
@@ -90,5 +90,4 @@ public class Sketch extends PApplet {
     fltCircleY = constrain(fltCircleY, 0, height - 25);
     fltCircleAngle += fltCircleSpeed;
   }
-
 }
