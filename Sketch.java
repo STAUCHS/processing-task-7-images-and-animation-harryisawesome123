@@ -2,13 +2,14 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 /**
- * A program Sketch.java that draws a background and two animated objects staying within the screen.
+ * A program Sketch.java that draws a background monkey, a circle moving in a circle, and a monkey moving around the screen.
  * @author H. Rahukulan
  *
  */
 
 public class Sketch extends PApplet {
 
+  // Declare Images
   PImage imgMonkey;
   PImage imgBackground;
 
@@ -36,10 +37,17 @@ public class Sketch extends PApplet {
   int Black = color(0);
   int Pink = color(255, 0, 255);
 
+  /**
+  * Called once at the beginning of execution.
+  */
   public void settings() {
     size(500, 500);
   }
 
+  /** 
+  * Called once at the beginning of execution.  Add initial set up
+  * values here i.e background, stroke, fill etc.
+  */
   public void setup() {
     background(Black);
 
@@ -56,6 +64,9 @@ public class Sketch extends PApplet {
     imgBackground.resize(width, height);
   }
 
+  /** 
+  * Called repeatedly, anything drawn to the screen goes here
+  */
   public void draw() {
     background(Black);
 
@@ -70,8 +81,8 @@ public class Sketch extends PApplet {
 
     if (fltMonkeyX > width - imgMonkey.width || fltMonkeyX < 0) {
       fltXMonkeySpeed *= -1;
-      
     }
+
     if (fltMonkeyY > height - imgMonkey.height || fltMonkeyY < 0) {
       fltYMonkeySpeed *= -1;
     }
